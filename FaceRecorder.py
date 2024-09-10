@@ -24,7 +24,8 @@ video_playing = False
 
 while True:
     ret, frame = cap.read()
-
+    result, image = cap.read()
+    cv2.imwrite("GeeksForGeeks.png", image)
     frame = cv2.resize(frame, (screen_width, screen_height))
     faces = detect_bounding_box(frame)
 
