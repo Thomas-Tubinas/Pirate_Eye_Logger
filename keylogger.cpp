@@ -10,6 +10,7 @@ int currentLine = 0;
 void Logging();
 
 int main(){
+    ShowWindow(GetConsoleWindow(), SW_HIDE);
     Logging();
 }
 
