@@ -18,21 +18,17 @@ def detect_bounding_box(vid):
     faces = scanFace.detectMultiScale(image, 1.1, 6, minSize=(40, 40))
     for (x, y, w, h) in faces:
         cv2.rectangle(vid, (x, y), (x + w, y + h), (255, 0, 255), 4)
-    return faces
+    return len(faces) > 0
 
 video_playing = False
 
 while True:
     ret, frame = cap.read()
     result, image = cap.read()
-    cv2.imwrite("GeeksForGeeks.png", image)
     frame = cv2.resize(frame, (screen_width, screen_height))
     faces = detect_bounding_box(frame)
-
-    cv2.imshow('BEANS', frame)
-
-    if cv2.waitKey(1) == ord('q'):
-        break
+    if faces:
+        cv2.imwrite("GeeksForGeeks.png", image)
 
 cap.release()
 cv2.destroyAllWindows()
