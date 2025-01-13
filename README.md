@@ -3,6 +3,9 @@
 ## What is it
 ### This program is a keylogger combined with a application monitor that will log the current application you are on. For web browsers, it will also display the website you are on.
 
+# Requirements
+### g++
+
 # Instructions
 ### 1. Download Pirate_Eye.cpp
 ### 2. If you don't have g++ download a compiler
